@@ -19,6 +19,9 @@ class ArduinoInterfacer : public QObject
 
     public slots:
         bool sendCmd(const char cmd);
+
+        bool send(const float value);
+
         void received();
 
     signals:

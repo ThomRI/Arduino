@@ -93,6 +93,11 @@ bool ArduinoInterfacer::sendCmd(const char cmd)
     return (m_serial.write(&cmd, 1) != -1);
 }
 
+bool ArduinoInterfacer::send(const float value)
+{
+    return (m_serial.write(QString::number(value).toUtf8()) != -1);
+}
+
 ArduinoInterfacer::~ArduinoInterfacer()
 {
     //dtor

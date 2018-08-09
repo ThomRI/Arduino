@@ -8,6 +8,7 @@
 #include <QVBoxLayout>
 #include <QList>
 #include <QVector>
+#include <QSlider>
 
 #include "qcustomplot.h"
 
@@ -25,18 +26,30 @@ class Arduino : public QWidget
     public slots:
         void received(const QList<float> values);
 
+        void update_Kp(int value);
+        void update_Ki(int value);
+        void update_Kd(int value);
+
+
     protected:
 
     private:
         ArduinoInterfacer m_ardInterfacer;
 
-        /* Plot */
-        QCustomPlot *m_plotter;
-        QCustomPlot *m_dPlotter;
+        /* Interface */
 
-        ValuesArray m_times;
-        ValuesArray m_Y;
-        ValuesArray m_dY;
+        /* Plot */
+            QCustomPlot *m_plotter;
+            QCustomPlot *m_dPlotter;
+
+            ValuesArray m_times;
+            ValuesArray m_Y;
+            ValuesArray m_dY;
+
+        /* Sliders */
+        QSlider *m_Kp_Slider,
+                *m_Ki_Slider,
+                *m_Kd_Slider;
 
         QTime m_timer;
 
