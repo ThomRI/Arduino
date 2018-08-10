@@ -69,9 +69,9 @@ static const uint qt_meta_data_Arduino[] = {
 
  // slots: parameters
     QMetaType::Void, 0x80000000 | 3,    4,
-    QMetaType::Void, QMetaType::Int,    6,
-    QMetaType::Void, QMetaType::Int,    6,
-    QMetaType::Void, QMetaType::Int,    6,
+    QMetaType::Void, QMetaType::Double,    6,
+    QMetaType::Void, QMetaType::Double,    6,
+    QMetaType::Void, QMetaType::Double,    6,
 
        0        // eod
 };
@@ -83,9 +83,9 @@ void Arduino::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, voi
         Q_UNUSED(_t)
         switch (_id) {
         case 0: _t->received((*reinterpret_cast< const QList<float>(*)>(_a[1]))); break;
-        case 1: _t->update_Kp((*reinterpret_cast< int(*)>(_a[1]))); break;
-        case 2: _t->update_Ki((*reinterpret_cast< int(*)>(_a[1]))); break;
-        case 3: _t->update_Kd((*reinterpret_cast< int(*)>(_a[1]))); break;
+        case 1: _t->update_Kp((*reinterpret_cast< double(*)>(_a[1]))); break;
+        case 2: _t->update_Ki((*reinterpret_cast< double(*)>(_a[1]))); break;
+        case 3: _t->update_Kd((*reinterpret_cast< double(*)>(_a[1]))); break;
         default: ;
         }
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {

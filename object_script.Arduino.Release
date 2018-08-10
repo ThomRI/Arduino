@@ -1,0 +1,12 @@
+INPUT(
+./release\main.o
+./release\qcustomplot.o
+./release\Arduino.o
+./release\ArduinoInterfacer.o
+./release\Axis3DPreview.o
+./release\DerivatorWidget.o
+./release\moc_qcustomplot.o
+./release\moc_Arduino.o
+./release\moc_ArduinoInterfacer.o
+./release\moc_Axis3DPreview.o
+);

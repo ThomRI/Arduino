@@ -4,7 +4,8 @@ DerivatorWidget::DerivatorWidget(double rangeX) :
     m_rangeX(rangeX)
 {
     /* Creating interface */
-    m_plotter = new QCustomPlot(this);
+    m_plotter = new QCustomPlot();
+
     m_plotter->plotLayout()->clear();
 
     m_axis = new QCPAxisRect(m_plotter);

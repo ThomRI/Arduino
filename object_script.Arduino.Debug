@@ -1,0 +1,12 @@
+INPUT(
+./debug\main.o
+./debug\qcustomplot.o
+./debug\Arduino.o
+./debug\ArduinoInterfacer.o
+./debug\Axis3DPreview.o
+./debug\DerivatorWidget.o
+./debug\moc_qcustomplot.o
+./debug\moc_Arduino.o
+./debug\moc_ArduinoInterfacer.o
+./debug\moc_Axis3DPreview.o
+);

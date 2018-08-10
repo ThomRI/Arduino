@@ -4,7 +4,6 @@
 #define MAX_VALUES 1000 // Drops
 #include "qcustomplot.h"
 
-#include <QGroupBox>
 
 class DerivatorWidget : public QWidget
 {

@@ -1,0 +1,10 @@
+#version 150 core
+#define lowp
+#define mediump
+#define highp
+#line 1
+in vec3 frag_Color;
+out vec4 out_Color;
+void main() {
+   out_Color = vec4(frag_Color, 1.0);
+}

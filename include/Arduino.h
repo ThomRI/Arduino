@@ -3,14 +3,17 @@
 
 #include "ArduinoInterfacer.h"
 #include "DerivatorWidget.h"
+#include "Axis3DPreview.h"
 
+#include <QApplication>
 #include <QString>
 #include <QtDebug>
 #include <QTime>
 #include <QVBoxLayout>
 #include <QList>
 #include <QVector>
-#include <QSlider>
+#include <QDoubleSpinBox>
+#include <QPushButton>
 
 #include <iostream>
 
@@ -26,9 +29,9 @@ class Arduino : public QWidget
     public slots:
         void received(const QList<float> values);
 
-        void update_Kp(int value);
-        void update_Ki(int value);
-        void update_Kd(int value);
+        void update_Kp(double value);
+        void update_Ki(double value);
+        void update_Kd(double value);
 
 
     protected:
@@ -36,20 +39,21 @@ class Arduino : public QWidget
     private:
         ArduinoInterfacer m_ardInterfacer;
 
-        /* Interface */
-
+        /* 3D Axis */
+            Axis3DPreview *m_3Daxis;
         /* Plot */
             DerivatorWidget *m_derivator;
 
         /* Sliders */
-        QSlider *m_Kp_Slider,
-                *m_Ki_Slider,
-                *m_Kd_Slider;
+        QDoubleSpinBox  *m_Kp_Box,
+                        *m_Ki_Box,
+                        *m_Kd_Box;
 
         QTime m_timer;
 
         /* Widget */
-        QVBoxLayout *m_layout;
+        QVBoxLayout *m_vLayout;
+        QHBoxLayout *m_hLayout;
 };
 
 #endif // ARDUINO_H

@@ -7,6 +7,7 @@
 #include <QtDebug>
 #include <QDataStream>
 #include <QList>
+#include <QThread>
 
 #include <math.h>
 

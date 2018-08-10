@@ -1,5 +1,7 @@
 #include <QApplication>
 #include "include/Arduino.h"
+#include "include/Axis3DPreview.h"
+#include <QTimer>
 
 int main(int argc, char *argv[])
 {
