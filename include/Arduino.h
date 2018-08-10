@@ -2,6 +2,8 @@
 #define ARDUINO_H
 
 #include "ArduinoInterfacer.h"
+#include "DerivatorWidget.h"
+
 #include <QString>
 #include <QtDebug>
 #include <QTime>
@@ -9,8 +11,6 @@
 #include <QList>
 #include <QVector>
 #include <QSlider>
-
-#include "qcustomplot.h"
 
 #include <iostream>
 
@@ -39,12 +39,7 @@ class Arduino : public QWidget
         /* Interface */
 
         /* Plot */
-            QCustomPlot *m_plotter;
-            QCustomPlot *m_dPlotter;
-
-            ValuesArray m_times;
-            ValuesArray m_Y;
-            ValuesArray m_dY;
+            DerivatorWidget *m_derivator;
 
         /* Sliders */
         QSlider *m_Kp_Slider,

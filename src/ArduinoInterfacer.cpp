@@ -44,16 +44,8 @@ void ArduinoInterfacer::received()
         m_buffer.append(c);
     }
 
-    /*while(!in.atEnd()) {
-        float value;
-        in >> value;
-        qDebug() << value;
 
-        emit pushed(value);
-    }*/
-
-
-    /* FOR Serial.Write()
+    /* #### FOR Serial.Write() ####
     for(QByteArray::iterator it = buf.begin();it != buf.end();it++) {
         unsigned char c = (*it); // Byte received
         if(c == 0xFF) { // New transmission
