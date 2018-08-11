@@ -11,13 +11,20 @@ ArduinoInterfacer::ArduinoInterfacer(QString port, qint32 rate)
 
     m_buffer.clear();
 
+    connectSerial();
+
+    connect(&m_serial, SIGNAL(readyRead()), this, SLOT(received()));
+}
+
+void ArduinoInterfacer::connectSerial()
+{
+    m_serial.close();
     if(m_serial.open(QIODevice::ReadWrite)) {
         qDebug() << "Device opened !";
     } else {
-        qDebug() << "Error opening the device.";
+        qDebug() << "Couldn't connect. Reattempt in 1 sec.";
+        QTimer::singleShot(1000, this, SLOT(connectSerial()));
     }
-
-    connect(&m_serial, SIGNAL(readyRead()), this, SLOT(received()));
 }
 
 void ArduinoInterfacer::received()

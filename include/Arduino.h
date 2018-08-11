@@ -2,7 +2,7 @@
 #define ARDUINO_H
 
 #include "ArduinoInterfacer.h"
-#include "DerivatorWidget.h"
+#include "MultiPlot.h"
 #include "Axis3DPreview.h"
 
 #include <QApplication>
@@ -32,7 +32,9 @@ class Arduino : public QWidget
         void update_Kp(double value);
         void update_Ki(double value);
         void update_Kd(double value);
+        void update_Point(double value);
 
+        void connectClicked();
 
     protected:
 
@@ -42,12 +44,14 @@ class Arduino : public QWidget
         /* 3D Axis */
             Axis3DPreview *m_3Daxis;
         /* Plot */
-            DerivatorWidget *m_derivator;
+            MultiPlot *m_multiPlot;
 
-        /* Sliders */
+        /* Widgets */
         QDoubleSpinBox  *m_Kp_Box,
                         *m_Ki_Box,
-                        *m_Kd_Box;
+                        *m_Kd_Box,
+                        *m_point_Box;
+        QPushButton     *m_connectButton;
 
         QTime m_timer;
 

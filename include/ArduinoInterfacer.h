@@ -7,7 +7,7 @@
 #include <QtDebug>
 #include <QDataStream>
 #include <QList>
-#include <QThread>
+#include <QTimer>
 
 #include <math.h>
 
@@ -23,6 +23,7 @@ class ArduinoInterfacer : public QObject
         bool send(const float value);
 
         void received();
+        void connectSerial();
 
     signals:
         void pushed(const QList<float> values); // Pushes a received float

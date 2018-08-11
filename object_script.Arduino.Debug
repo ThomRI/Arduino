@@ -5,6 +5,7 @@ INPUT(
 ./debug\ArduinoInterfacer.o
 ./debug\Axis3DPreview.o
 ./debug\DerivatorWidget.o
+./debug\MultiPlot.o
 ./debug\moc_qcustomplot.o
 ./debug\moc_Arduino.o
 ./debug\moc_ArduinoInterfacer.o

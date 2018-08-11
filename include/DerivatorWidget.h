@@ -8,7 +8,7 @@
 class DerivatorWidget : public QWidget
 {
     public:
-        DerivatorWidget(double rangeX);
+        DerivatorWidget(double rangeX = -1);
         virtual ~DerivatorWidget();
 
         void add(double x, double y);
@@ -21,8 +21,6 @@ class DerivatorWidget : public QWidget
         QCustomPlot *m_plotter;
         QCPAxisRect *m_axis, *m_dAxis;
         QCPGraph *m_graph, *m_dGraph;
-
-        QCPMarginGroup *m_marginGroup;
 
         /* Values */
         QVector<double> m_X;

@@ -79,7 +79,7 @@ void Axis3DPreview::initializeGL()
 
     /* Camera */
     m_camera.setToIdentity();
-    m_camera.lookAt(QVector3D(2.0, 1.0, 1.0), QVector3D(0.0, 0.0, 0.0), QVector3D(0.0, 0.0, 1.0));
+    m_camera.lookAt(QVector3D(1.0, -1.0, 1.0), QVector3D(0.0, 0.0, 0.30), QVector3D(0.0, 0.0, 1.0));
 
     /* OpenGL */
     glEnable(GL_DEPTH_TEST);
@@ -121,7 +121,7 @@ void Axis3DPreview::setRotation(double anglex, double angley, double anglez)
     m_world.rotate(angley, 0.0, 1.0, 0.0);
     m_world.rotate(anglez, 0.0, 0.0, 1.0);
 
-    paintGL();
+    update();
 }
 
 void Axis3DPreview::cleanup()

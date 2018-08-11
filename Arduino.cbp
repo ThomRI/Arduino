@@ -36,9 +36,13 @@
 		</Compiler>
 		<Unit filename="include/Arduino.h" />
 		<Unit filename="include/ArduinoInterfacer.h" />
+		<Unit filename="include/Axis3DPreview.h" />
+		<Unit filename="include/DerivatorWidget.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/Arduino.cpp" />
 		<Unit filename="src/ArduinoInterfacer.cpp" />
+		<Unit filename="src/Axis3DPreview.cpp" />
+		<Unit filename="src/DerivatorWidget.cpp" />
 		<Extensions>
 			<code_completion />
 			<envvars />
